@@ -2,7 +2,7 @@
 
 This repository containts an Ethereum DApp that demonstrates the _Supply Chain flow of Coffee_ from coffee farmers, to coffee distributors, to retailers and ultimately end consumers. Farmers harvest, process, pack, and sell coffee grains, distributors buy from farmers and ship to retailers, which in term receive and ultimately consumers buy. For more on the the actors, states, and activities check the UML diagrams in the UML folder.
 
-Solidity Contract are deployed in:\
+Solidity Contracts are deployed on the Rinkeby network at:\
 __Contract Address:__ 0xad43Cc2b214c1a6fc1FC5aEe123Ed79bff96Bb17\
 __TX Hash:__ 0x3df90e3fbd0f065eb30efec7d18514b9a15a5fa82fd4a0298f2e05979d459d34\
 __Deployed by:__ 0x27d8d15cbc94527cadf5ec14b69519ae23288b95\
