@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Fair Trade Coffee </title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="content">
+    <div class="container">
+        <h1 style="text-align: center;">Fair Trade Coffee</h1>
+        <hr>
+        <p style="text-align: center;">Prove the authenticity of coffee using the Ethereum blockchain.</p>
+    </div>
+
+    <!-- ###########  SHOW COFFEE DATA  ########### -->
+
+    <div id="ftc-harvest">
+        <h2>View Coffee Grain Info — anyone can access</h2>
+        <text class="section-description">Add the UPC of the coffee grain you want to view and press <i> Fetch Data 1</i> for information 
+            regarding the product's origin, and <i> Fetch Data 2</i>  for information about the actors 
+            involved in the product's supply chain process.</text>
+            <br>
+            <br>
+        <div class="form-group">
+            UPC
+            <br>
+            <input type="number" id="upc" name="upc" placeholder="Required" size="10"><br>
+            <div class=button-div>
+                <!-- <button class="btn-fetchOne" id="button" type="button" data-id="9">Fetch Data 1</button>
+                <button class="btn-fetchTwo" id="button" type="button" data-id="10">Fetch Data 2</button> -->
+                <button class="btn-fetchThree" id="button" type="button" data-id="11">View Product Info</button>
+            </div>
+            <br>
+            SKU
+            <br>
+            <input class="input-field" type="number" id="sku" name="sku" size="10" maxlength="10"><br>
+            Owner ID
+            <br>
+            <input type="text" id="ownerID" name="ownerID" size="30"><br>
+            Farmer ID
+            <br>
+            <input class="show-farm-info" type="text" id="originFarmerID" name="originFarmerID" size="50"><br>
+            Farm Name
+            <br>
+            <input class="show-farm-info" type="text" id="originFarmName" name="originFarmName"><br>
+            Farm Information
+            <br>
+            <input class="show-farm-info" type="text" id="originFarmInformation" name="originFarmInformation"><br>
+            Farm Latitude
+            <br>
+            <input class="show-farm-info" type="text" id="originFarmLatitude" name="originFarmLatitude"><br>
+            Farm Longitude
+            <br>
+            <input class="show-farm-info" type="text" id="originFarmLongitude" name="originFarmLongitude"><br>
+            Product Notes
+            <br>
+            <input type="text" id="productNotes" name="productNotes" size="60"><br>
+            Product Price (ETH)
+            <br>
+            <input type="number" id="productPrice" name="productPrice">ETH<br>
+            Product Price (ETH)
+            <br>
+            <input type="text" id="itemState" name="itemState"><br>
+            Distributor ID
+            <br>
+            <input type="text" id="distributorID" name="distributorID" size="50">
+            <br>
+            Retailer ID
+            <br>
+            <input type="text" id="retailerID" name="retailerID" size="50"><br>
+            Consumer ID
+            <br>
+            <input type="text" id="consumerID" name="consumerID" size="50"><br>
+        
+        </div>
+        <div class=form-break></div>
+
+         <!-- ###########  FARMER INPUT SECTION ########### -->
+
+        <h2>Farmer's Panel & Data Input — only <i>Farmer</i> can access </h2>
+        <text class="section-description">To be used by farmers to record Farm & Grain data and append it to the blockchain during the early stages of the coffee product.</text>
+        <br>
+        <br>
+        <div class="form-group">
+            <h4> To Harvest: </h4>
+            UPC
+            <br>
+            <input type="number" id="upc-input-harvest" name="upc" placeholder="example: 1" size="10"><br>
+            <br>
+            Farm Name
+            <br>
+            <input type="text" id="originFarmName-input-harvest" name="originFarmName" placeholder="example: John Doe"><br>
+            Farm Information
+            <br>
+            <input type="text" id="originFarmInformation-input-harvest" name="originFarmInformation" placeholder="example: Yarra Valley"><br>
+            Farm Latitude
+            <br>
+            <input type="text" id="originFarmLatitude-input-harvest" name="originFarmLatitude" placeholder="example: -38.239770"><br>
+            Farm Longitude
+            <br>
+            <input type="text" id="originFarmLongitude-input-harvest" name="originFarmLongitude" placeholder="example: 144.341490"><br>
+            Product Notes
+            <br>
+            <input type="text" id="productNotes-input-harvest" name="productNotes" placeholder="example: Best beans for Espresso" size="60"><br>
+            <button class="btn-harvest" id="button" type="button" data-id="1">Harvest</button>
+
+            <h4> To Process: </h4>
+            UPC
+            <br>
+            <input type="number" id="upc-input-process" name="upc" placeholder="example: 1" size="10"><br>
+            <button class="btn-process" id="button" type="button" data-id="2">Process</button>
+
+            <h4> To Pack: </h4>
+            UPC
+            <br>
+            <input type="number" id="upc-input-pack" name="upc" placeholder="example: 1" size="10"><br>
+            <button class="btn-pack" id="button" type="button" data-id="3">Pack</button>
+
+            <h4> To Sell: </h4>
+            UPC
+            <br>
+            <input type="number" id="upc-input-sell" name="upc" placeholder="example: 1" size="10"><br>
+            Product Price (ETH)
+            <br>
+            <input type="number" id="productPrice-input" name="productPrice" placeholder="example: 1">ETH<br>
+            <button class="btn-forsale" id="button" type="button" data-id="4">ForSale</button>
+
+        </div>
+        <div class=form-break></div>
+
+        <!-- ###########  DISTRIBUTOR SECTION ########### -->
+
+        <h2>Distributor's Panel — only <i>Distributors</i> can access </h2>
+        <text class="section-description">To be used by farmers to record Farm & Grain data and append it to the blockchain during the early stages of the coffee product.</text>
+        <br>
+        <br>
+        <div class="form-group">
+            <h4> To Buy: </h4>
+            UPC
+            <br>
+            <input type="number" id="upc-input-buy" name="upc" placeholder="example: 1" size="10"><br>
+            To Pay (ETH)
+            <br>
+            <input type="number" id="toPay-buy-input" name="toPay" placeholder="example: 1" size="10">ETH<br>
+            <button class="btn-buy" id="button" type="button" data-id="5">Buy</button>
+            <h4> To Ship: </h4>
+            UPC
+            <br>
+            <input type="number" id="upc-input-ship" name="upc" placeholder="example: 1" size="10"><br>
+            <button class="btn-ship" id="button" type="button" data-id="6">Ship</button>
+        </div>
+        <div class=form-break></div>
+
+        <!-- ###########  RETAILER SECTION ########### -->
+
+        <h2>Retailer's Panel — only <i>Retailers</i> can access </h2>
+        <text class="section-description">To be used by farmers to record Farm & Grain data and append it to the blockchain during the early stages of the coffee product.</text>
+        <br>
+        <br>
+        <div class="form-group">
+            UPC
+            <br>
+            <input type="number" id="upc-input-receive" name="upc" placeholder="example: 1" size="10"><br>
+            <button class="btn-receive" id="button" type="button" data-id="7">Receive</button>
+        </div>
+        <div class=form-break></div>
+
+        <!-- ###########  CONSUMER SECTION ########### -->
+
+        <h2>Consumer's Panel — only <i>Consumers</i> can access </h2>
+        <text class="section-description">To be used by farmers to record Farm & Grain data and append it to the blockchain during the early stages of the coffee product.</text>
+        <br>
+        <br>
+        <div class="form-group">
+            UPC
+            <br>
+            <input type="number" id="upc-input-purchase" name="upc" placeholder="example: 1" size="10"><br>
+            To Pay (ETH)
+            <br>
+            <input type="number" id="toPay-purchase-input" name="toPay" placeholder="example: 1" size="10">ETH<br>
+            <button class="btn-purchase" id="button" type="button" data-id="8">Purchase</button>
+        </div>
+        <div class=form-break></div>
+
+
+        <!-- <h2>Product Details</h2>
+        <div class="form-group">
+            
+            Distributor ID
+            <br>
+            <input type="text" id="distributorID" name="distributorID" value="0xf1b1bcd24dad92303dd9fe78be639f7bcf9c238d"
+                size="50">
+            <br>
+            Retailer ID
+            <br>
+            <input type="text" id="retailerID" name="retailerID" value="0x0fb2bfefd526966c87efa19f6693d50971763fc2"
+                size="50"><br>
+            Distributor ID
+            <br>
+            <input type="text" id="consumerID" name="consumerID" value="0x5d777e9127b28fb119e81a6304278a0a21bef1c4"
+                size="50"><br>
+            <br>
+            <button class="btn-buy" id="button" type="button" data-id="5">Buy</button>
+            <button class="btn-ship" id="button" type="button" data-id="6">Ship</button>
+            <button class="btn-receive" id="button" type="button" data-id="7">Receive</button>
+            <button class="btn-purchase" id="button" type="button" data-id="8">Purchase</button>
+        </div>
+        <div class=form-break></div> -->
+        <hr>
+    </div> <!-- htc harvest closing div -->
+
+    <h2>Transaction History<span id="ftc-history"></span></h2>
+    <div>
+        <ul id="ftc-events">
+            <!-- Events will appear here from app.js -->
+        </ul>
+        <br>
+        <hr>
+    </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script src="js/web3.min.js"></script> -->
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
