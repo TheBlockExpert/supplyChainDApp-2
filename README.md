@@ -25,9 +25,8 @@ To deploy locally:
 3. Run a local ethereum network with `ganache-cli -m "spirit supply whale amount human item harsh scare congress discover talent hamster"`
 4. Run `truffle compile`, `truffle migrate`, and `truffle test`. Verify there are no errors and all tests passed. 
 5. In a separate terminal window, run the dapp by `npm run dev`.
-```
 
-## Built With
+### Built With
 
 * [Ethereum/Solidity](https://www.ethereum.org/)
 * [Truffle Framework](http://truffleframework.com/)
